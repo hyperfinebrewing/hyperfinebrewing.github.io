@@ -1,0 +1,244 @@
+body, html {
+    height: 100%;
+}
+html {
+  background-color: rgb(12,1,2);
+}
+body {
+	padding:0;
+  margin:0;
+  
+  /*background: green;*/
+background-size: cover;
+background-attachment: fixed;
+height: 100%;
+  padding-bottom: 20px;
+  color: white;
+  background-color: red;
+  background: url('bg.jpg') center center no-repeat; 
+  background-size: 120% 120%;
+  
+}
+
+#background {
+	position: absolute;
+	
+	top:0;
+	left:0;
+	right: 0;
+  bottom:0;
+
+  overflow: hidden;;
+
+  /*
+  width: 100%;
+  height: 100%;
+  /*
+	/*background-image: linear-gradient(#580d06, #4a0d06, #3c0d06, #2b0d06, #220d06, #120d06);*/
+  
+	
+  text-align: center;
+  
+}
+/*
+#background #beer {
+  position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-10;
+  background: url('bg.jpg') no-repeat center center fixed; 
+  animation: backgroundShift 5s ease-in-out infinite alternate;
+}
+*/
+
+
+#bubblesContainer {
+  
+
+pointer-events: none; 
+ user-select: none; 
+}
+#bubblesContainer > div {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.bubble {
+  margin: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0.4;
+  background: url('bubbles_stacked_layer1.png') no-repeat;
+  /*background-position-y: 48px;*/
+  width: 40px;
+  height: 40px;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+.layer1 {
+  background-image: url('bubbles_stacked_layer1.png') !important;
+}
+.layer2 {
+  background-image: url('bubbles_stacked_layer2.png') !important;
+}
+.layer3 {
+  background-image: url('bubbles_stacked_layer3.png') !important;
+}
+
+
+
+
+.streamBubble {
+  margin: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  animation: bubbleStream 10s ease-in infinite;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+/* separate so that we can independently animate X and Y */
+.streamBubble > span {  
+    display:block;
+    background: url('bubbles_stacked_layer1.png') no-repeat;
+    width: 40px;
+    height: 40px;
+    animation: bubbleStreamMoveLeft 0.5s ease-in-out infinite alternate;
+    backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+
+@keyframes backgroundShift { 
+    0% { 
+        transform: rotate(0deg) scale(1);
+    }    
+    100% { 
+        transform: rotate(2deg) scale(1.2);
+    }
+}
+
+@keyframes bubbleStream { 
+    0% { 
+        transform: translateY(100vh) scale(0.7);
+        opacity: 0;        
+    }
+    10% { 
+        transform: translateY(95vh) scale(0.7);
+        opacity: 0.4;
+        
+    }
+    100% { 
+        transform: translateY(-10vh) scale(0.7);
+        opacity: 0.9;
+        
+    }
+}
+@keyframes bubbleStreamMoveLeft { 
+    0% { 
+        transform: translateX(0px);
+    }
+    100% { 
+        transform: translateX(15px);
+    }
+}
+@keyframes bubbleStreamMoveRight { 
+    0% { 
+        transform: translateX(0px);
+    }
+    100% { 
+        transform: translateX(15px);
+    }
+}
+
+
+
+#content {
+  text-align: center;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  text-shadow: 1px 1px #000000;
+  padding: 25px;
+
+}
+
+
+#logo {
+  display:inline-block;
+  width: 100%;
+  max-width: 700px;
+  
+
+}
+
+
+
+
+#welcome {
+  display: inline-block;
+  max-width: 700px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+
+form#mailchimp {
+
+  text-align: center;
+  padding-bottom: 30px;
+  
+
+}
+form#mailchimp input#email {
+
+
+  font-size: 15px;
+  border: 1px solid #ABB0B2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #343434;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0px 0.4em;
+  display: inline-block;
+  margin: 3px;
+  width: 350px;
+  max-width:100%;
+  vertical-align: top;
+}
+
+
+form#mailchimp #subscribe {
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  letter-spacing: .03em;
+  color: #fff;
+  background-color: #aaa;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 3px;
+  transition: background-color 0.23s ease-in-out 0s;
+}
+form#mailchimp #subscribe:hover {
+  background-color: #777;
+  cursor: pointer;
+}
