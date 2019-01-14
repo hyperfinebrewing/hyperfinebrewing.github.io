@@ -20,6 +20,9 @@ height: 100%;
   
 }
 
+footer {
+  margin-top: 30px;
+}
 #background {
 	position: absolute;
 	
@@ -192,10 +195,16 @@ pointer-events: none;
   display: inline-block;
   max-width: 700px;
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  text-align: justify;
 }
 
 
+#signup_instructions {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #ccc;
+}
 form#mailchimp {
 
   text-align: center;
