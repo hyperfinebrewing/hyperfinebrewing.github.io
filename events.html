@@ -1,0 +1,36 @@
+---
+layout: default
+title: Events
+---
+<div class="section">
+	<div class="container">
+		<h4>Upcoming Events</h4>
+		
+		<div class="events">
+
+			{% for event in site.events %}
+			<div class="row event">
+				<div class="one-third column">
+					<a href="{{ event.url }}">
+						<img src="{{ event.image_url }}">
+					</a>
+				</div>
+				<div class="two-thirds column">
+					<div class="date">
+						{{ event.event_date }} @ <a class="location" href="{{ event.location_url }}">{{ event.location }}</a>
+					</div>
+					<a class="title" href="{{ event.url }}">
+						{{ event.title }}
+					</a>
+					<div class="description">
+						{{ event.content | markdownify }}
+					</div>
+
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+</div>

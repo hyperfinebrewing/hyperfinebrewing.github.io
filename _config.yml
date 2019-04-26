@@ -1,0 +1,25 @@
+collections:
+  events:
+    output: true
+  beers:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "beers"
+    values:
+      layout: "beers"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

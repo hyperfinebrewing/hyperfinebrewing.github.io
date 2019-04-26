@@ -1,0 +1,470 @@
+
+
+html {
+	background-color: rgba(20,21,25,1);
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+  	font-weight: 300;
+  	font-size: 1.6em;
+  	line-height: 1.6;
+  	color: #111;
+
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+  	
+}
+.content {
+	flex: 1;
+	background: white;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 20px 0;
+  
+}
+.section-heading, .section-description {
+  margin-bottom: 1.2rem;
+}
+
+
+.container {
+
+}
+
+
+@media (min-width:400px) {
+    .container {
+        width: 95%;
+        padding: 0
+    }
+}
+
+@media (min-width:550px) {
+    .container {
+        width: 90%
+    }
+}
+
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#header {
+	background: linear-gradient(#E7A8a4 0%, #dd9692 15%, #c47574 90%);
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 48px;
+	text-align: center;
+
+}
+#header .border {
+	width: 100vw;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	background: url("/assets/images/header_border.png") center bottom no-repeat;
+	background-size: 100% 100%;
+}
+#header #logo {
+	display: inline-block;
+	width: 300px;
+	padding: 10px 0;
+	max-width: 80%;
+	filter: drop-shadow(0px 0px 1px rgba(0,0,0, 0.9));
+}
+
+
+#header .container {
+	position: relative;
+	
+}
+
+#header nav {
+	margin: 0;
+	padding: 0px 0px;
+	list-style: none;
+	white-space: nowrap;
+}
+
+#header nav a {
+	display: inline-block;
+	padding: 0px 1em;
+	font-weight: 500;
+	font-size: 18px;
+	color: #232529;
+	text-decoration: none;
+}
+#header nav a:hover {
+	text-decoration: underline;	
+
+}
+
+#header nav a.active {
+	font-weight: 600;
+}
+
+@media (min-width: 700px) {
+	#header {
+		text-align: left;
+	}
+	#header #logo {
+		display: block;
+	}
+	#header nav {
+		position: absolute;
+		top: 32px;
+		right: 00px;
+		padding:0;
+	}
+	#header nav a {
+		font-size: 20px;
+	}
+}
+
+
+
+
+
+
+
+/* Spacescape
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.parallax {
+	will-change: transform;	
+}
+
+
+#spacescape {
+	position: relative;
+	width: 100vw;
+	padding:0;
+	/*background-color: black;*/
+
+	background: linear-gradient(0deg, rgba(60,60,84,1) 0%, rgba(60,60,84,1) 7%, rgba(35,39,51,1) 30%, rgba(21,25,28,1) 50%, rgba(20,21,25,1) 100%); /*original art*/
+	z-index: 0;
+	margin: 0;
+	text-align: center;
+	overflow: hidden;
+	height: 100vh;
+
+	
+}
+#spacescape div {
+	
+	position: absolute;
+		
+}
+#spacescape #logoContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 229px;
+	right: 0;
+
+
+}
+#spacescape #logo {
+	position: relative;
+	display: inline-block;
+	width: 80%;
+	max-width: 600px;
+	top: 25%;
+	z-index: 20;
+
+	filter: drop-shadow(0px 0px 20px rgba(255,255,255, 0.5));
+}
+
+@media (min-width:400px) {
+	 #spacescape {
+		height: 100vh;
+	}   
+}
+
+
+
+
+#stars {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	pointer-events:none;
+	z-index: -1;
+
+}
+#starsMask {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	background: linear-gradient(0deg, rgba(60,60,84,1) 0%, rgba(60,60,84,1) 7%, rgba(35,39,51,0.8) 30%, rgba(21,25,28,0.6) 50%, rgba(20,21,25,0.3) 100%);
+
+}
+
+#stars1, #stars2, #stars3 {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+	will-change: transform;
+
+	/*
+	pointer-events:none;
+	user-select: none;*/
+}
+
+
+#stars1 {
+	animation:spin 900s linear infinite;
+}
+#stars2 {
+	animation:spin 700s linear infinite;
+}
+#stars3 {
+	animation:spin 300s linear infinite;
+}
+
+
+@keyframes spin { 100% { transform: rotate(-360deg); } }
+
+
+
+/* Mountains (Parallax)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#backMountains {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 102px;
+	background-image: url('/assets/images/mountains/backMountains2.png');
+	background-position: bottom center;	
+	background-repeat: no-repeat;
+	background-size: 700px 102px;
+	z-index: 10;
+	
+}
+
+
+#frontMountains {
+	position: absolute;
+	bottom: 0px;
+	width: 100vw;
+	height: 229px;
+	background-image: url('/assets/images/mountains/frontMountains.png');
+	background-position: bottom center;	
+	background-repeat: no-repeat;
+	background-size: 700px 229px;
+	z-index: 100;
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#spacescape #frontMountains #navbar {
+	position: absolute;
+	width: 100%;
+	top: 55%;
+	transform: translateY(-50%);
+}
+#spacescape #frontMountains #navbar nav {
+	margin: 0;
+	padding: 0px 0px;
+	list-style: none;
+	white-space: nowrap;
+
+}
+
+#spacescape #frontMountains #navbar nav a {
+	display: inline-block;
+	padding: 0px 1rem;
+	font-weight: 500;
+	font-size: 2.1rem;
+	color: #5e1b22;
+
+	text-decoration: none;
+}
+#spacescape #frontMountains #navbar nav a:hover {
+	text-decoration: underline;	
+
+}
+
+#spacescape #frontMountains #navbar nav a.active {
+	font-weight: 600;
+}
+
+
+
+
+@media (min-width:700px) {
+
+	#spacescape #logoContainer {
+		position: absolute;
+		bottom: 16vw;
+	}
+	#frontMountains {
+		height: 32.73vw;
+		max-height: 50vh;
+		background-size: 100% 100%;
+
+	}
+	#backMountains {
+		/*
+		height: 14.57vw;
+		max-height: 22.2578674vh;
+		*/
+
+		height: 32.73vw;
+		max-height: 50vh;
+
+		background-size: 100% 100%;
+
+	}
+
+	#navbar nav a {
+		font-size: 3rem !important;
+		padding: 0px 2.5rem !important;
+	}
+}
+
+
+
+/* Main
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#home {
+	background-color: white;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#home .beer_list {
+	list-style: none;
+}
+#home .beer_list li {
+	margin: 20px 0;
+}
+
+#home .beer_list li .title {
+	font-weight: 500;
+}
+
+
+
+/* Newsletter */
+.newsletterSignup {
+	/*background-color: #8282b3;*/ /*back mountain */
+	background-color: #46465e; /*middle mountain */
+	margin:0;
+	border-top:4px solid #232529;
+	text-align: center;
+	color: white;
+}
+.newsletterSignup form {
+	margin: 0;
+	padding:0;
+}
+.newsletterSignup button {
+	background-color: white;
+	color: #43465f;
+}
+
+/* Footer */
+.footer {
+	display: block;
+	color: #43465f;
+	margin:0;
+	border-top: 3px solid #232529;
+	
+	text-align: center;
+	font-size: 14px;
+
+	background-color: #232529;
+	color: white;
+}
+.footer .container {
+	text-align: center;
+}
+
+
+/* Beers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+ul.beers {
+	list-style: none;
+}
+.beers .beer {
+	border-top: 1px dotted #cccccc;
+	padding: 20px 0;
+}
+.beer img {
+	width: 100%;
+}
+.beer .date {
+	
+}
+.beer .location {
+	
+}
+.beer .title {
+	font-weight: 400;
+	font-size: 2em;
+}
+.beer .subtitle {
+	font-weight: 400;
+	font-size: 1.2em;
+}
+.beer .description {
+
+}
+
+
+/* Events
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ul.events {
+	list-style: none;
+}
+.events .event {
+	border-top: 1px dotted #cccccc;
+	padding: 20px 0;
+}
+.event img {
+	width: 100%;
+}
+.event .date {
+	
+}
+.event .location {
+	
+}
+.event .title {
+	font-weight: 400;
+	font-size: 2em;
+}
+
+.event .description {
+
+}

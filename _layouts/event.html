@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="section">
+	<div class="container">	
+		<div class="row event">
+			<div class="one-third column">
+				<a href="{{ page.event_url }}">
+					<img src="{{ page.image_url }}">
+				</a>
+			</div>
+			<div class="two-thirds column">
+				<div class="date">
+					{{ page.event_date }} @ <a class="location" href="{{ page.location_url }}">{{ page.location }}</a>
+				</div>
+				<a class="title" href="{{ page.event_url }}">
+					{{ page.title }}
+				</a>
+				<div class="description">
+					{{ content }}
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Beers
+---
+<div class="section">
+	<div class="container">
+		<h4>Our Beers</h4>
+		
+		<div class="beers">
+
+			{% for beer in site.beers %}
+			<div class="row beer">
+				<div class="one-third column">
+					
+						<img src="{{ beer.image_url }}">
+					
+				</div>
+				<div class="two-thirds column">
+					<a class="title" href="{{ beer.url }}">
+						{{ beer.title }}
+					</a>
+					<div class="subtitle">
+						{{ beer.subtitle }}
+					</div>
+					<div class="description">
+						{{ beer.content | markdownify }}
+					</div>
+
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+</div>
